@@ -17,18 +17,15 @@ import ScrollToTop from './Components/ScrollToTop';
 function App() {
   return (
     <>
-      <BrowserRouter>
-         <Navbar1 /> 
-         <ScrollToTop />
-         <Routes>
-        
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/service" element={<Service/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/Better-FM/" element={<Home />} />
-      </Routes>
-        
+      <BrowserRouter basename="/Better-FM">
+        <Navbar1 /> 
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </>
